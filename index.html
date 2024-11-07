@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Aspiradora - Sistema de Limpieza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="control-panel">
+            <button id="startButton" class="button">Iniciar Robot</button>
+            <div class="battery-container">
+                <div class="battery-icon">🔋</div>
+                <div class="battery-bar">
+                    <div id="batteryLevel" class="battery-level"></div>
+                </div>
+                <span id="batteryPercentage">100%</span>
+            </div>
+        </div>
+
+        <div class="status-panel">
+            <h3>Estado Actual:</h3>
+            <p id="currentStatus" class="status-text">Iniciando sistema</p>
+        </div>
+
+        <div class="warehouses-grid">
+        </div>
+
+        <div class="legend">
+            <h3>Leyenda de Estados:</h3>
+            <div class="legend-grid">
+                <div class="legend-item">
+                    <div class="color-box libre"></div>
+                    <span>Libre para limpiar</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box ocupada"></div>
+                    <span>Ocupada - Continuar con otra</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box no-limpiar"></div>
+                    <span>No limpiar</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box sucia"></div>
+                    <span>Sucia - Necesita limpieza</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="statistics">
+            <h3>Estadísticas:</h3>
+            <p>Bodegas limpiadas: <span id="cleanedWarehouses">0</span> / 2.5</p>
+            <button id="randomizeButton" class="button">Generar Estados Aleatorios</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
